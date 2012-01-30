@@ -1,5 +1,17 @@
-graphical patch edit
-librarian
-gtk gui
-alternative slider values
+- show effect blocks state (enabled/disabled)
+- add store button and create a separate panel for dump, send, store, (etc?) instead of overloading the toolbar
+- graphical audio route editor (dragndrop)
+- fix dry level, soft row and patching issue (firmware bug -> must edit dump instead of sending parameter change)
+- implement System.ContRemap and System.ProgChains (display one item at once)
+- fix a/b not updating display issue
+- librarian
+- (load and) edit program dumps
+- display all parameters
+- compare two programs
+- copy parameter section between programs
+- enhance manual browser
+- native gui (using chromium embeeded framework ?)
+- make gui more compact optionnaly
+- textual slider values instead of selects ?
+
 
