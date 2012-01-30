@@ -5,7 +5,6 @@ Lexicon MPX G2 editor / librarian
 
 Unix/Macintosh (requires python 2.6 or 2.7):
 
-    ./configure
     ./toprod.sh
 
 Windows:
