@@ -2213,6 +2213,9 @@ static void ParseDebugOpt(const char* arg) {
 }
 
 static void PrintHelp() {
+  printf("Usage: mpxedit [options]  \n"
+         "Documentation can be found at http://miprosoft.com/mpxg2\n");
+	/*
   printf("Usage: node [options] [ -e script | script.js ] [arguments] \n"
          "       node debug script.js [arguments] \n"
          "\n"
@@ -2236,6 +2239,8 @@ static void PrintHelp() {
          "NODE_DISABLE_COLORS    Set to 1 to disable colors in the REPL\n"
          "\n"
          "Documentation can be found at http://nodejs.org/\n");
+
+	 */
 }
 
 // Parse node command line arguments.
@@ -2293,6 +2298,7 @@ static void ParseArgs(int argc, char **argv) {
 
 
 static void EnableDebug(bool wait_connect) {
+#ifdef ALLOW_DEBUG
   // If we're called from another thread, make sure to enter the right
   // v8 isolate.
   node_isolate->Enter();
@@ -2318,12 +2324,14 @@ static void EnableDebug(bool wait_connect) {
   debugger_running = true;
 
   node_isolate->Exit();
+#endif
 }
 
 
 #ifdef __POSIX__
 // FIXME this is positively unsafe with isolates/threads
 static void EnableDebugSignalHandler(int signal) {
+#ifdef ALLOW_DEBUG
   // Break once process will return execution to v8
   v8::Debug::DebugBreak(node_isolate);
 
@@ -2331,6 +2339,7 @@ static void EnableDebugSignalHandler(int signal) {
     fprintf(stderr, "Hit SIGUSR1 - starting debugger agent.\n");
     EnableDebug(false);
   }
+#endif
 }
 
 
@@ -2368,6 +2377,7 @@ Handle<Value> DebugProcess(const Arguments& args) {
 
 #ifdef _WIN32
 DWORD WINAPI EnableDebugThreadProc(void* arg) {
+#ifdef ALLOW_DEBUG
   // Break once process will return execution to v8
   if (!debugger_running) {
     for (int i = 0; i < 1; i++) {
@@ -2378,7 +2388,7 @@ DWORD WINAPI EnableDebugThreadProc(void* arg) {
   }
 
   v8::Debug::DebugBreak();
-
+#endif
   return 0;
 }
 
@@ -2673,6 +2683,11 @@ void StartThread(node::Isolate* isolate,
 
 
 int Start(int argc, char *argv[]) {
+
+  printf("MPXG2Edit 1.0a2 - http://www.miprosoft.com/mpxg2\n"
+	  "Copyright (c) 2012 Luc Deschenaux\n\n"
+	  "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n");
+
   // This needs to run *before* V8::Initialize()
   argv = ProcessInit(argc, argv);
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>MPXG2Edit - System</title> 
+    <link rel="stylesheet"  href="css/jquery.mobile.css" />  
+    <link rel="stylesheet" href="css/mpxedit.css"/>
+    <script src="js/jquery.js"></script>
+    <script src="js/jqm-docs.js"></script>
+    <script src="js/jquery.mobile.js"></script>
+    <script src="js/mpxedit.js"></script>
+  </head>
+  <body>
+    <div data-role="page" data-add-back-btn="true" class="type-interior">
+      <div data-role="header" data-theme="b">
+        <h1>System Settings</h1>
+        <div id="toolbar" data-role="controlgroup" data-type="horizontal">
+          <a id="dump" href="/dump.html" data-role="button" data-icon="arrow-d" data-iconpos="left" >Dump</a>
+          <a id="send" href="/send.html" data-role="button" data-icon="arrow-u" data-iconpos="left" >Send</a>
+          <a id="help" data-role="button" data-icon="info" data-iconpos="left" >Help</a>
+          <a data-role="button" href="../../" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+        </div> 
+      </div><!-- /header -->
+      <div data-role="content">
+        <ul data-role="listview" data-theme="c" data-dividertheme="d">
+          <li><a href="0100.html">AudioConfig</a></li>
+          <li><a href="0101.html">Setup</a></li>
+          <li><a href="0102.html">MIDI</a></li>
+          <li><a href="0103.html">GlobalPatch</a></li>
+          <li><a href="0104.html">BypassPatch</a></li>
+          <li class="ui-disabled"><a href="0105.html">Cont Remap</a></li>
+          <li class="ui-disabled"><a href="0106.html">Prog Chains</a></li>
+          <li class="ui-disabled"><a href="0107.html">Midi Maps</a></li>
+          <li><a href="010E.html">Tuner Modes</a></li>
+          <li><a href="010F.html">GlobalModes</a></li>
+          <li><a href="0110.html">Sys Routing</a></li>
+        </ul>
+      </div><!-- /content -->
+    </div><!-- /page -->
+  </body>
+</html>
+

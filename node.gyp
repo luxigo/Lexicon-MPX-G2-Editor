@@ -13,6 +13,17 @@
       'src/node.js',
       'lib/_debugger.js',
       'lib/_linklist.js',
+      'lib/_third_party_main.js',
+      'lib/file.js',
+      'lib/_utils.js',
+      'lib/lexicon.js',
+      'lib/midi.js',
+      'lib/mime.js',
+      'lib/printf.js',
+      'lib/server.js',
+      'lib/form.js',
+      'lib/sysex.js',
+      'lib/data.js',
       'lib/assert.js',
       'lib/buffer.js',
       'lib/buffer_ieee754.js',
@@ -75,6 +86,7 @@
         'src/node.cc',
         'src/node_vars.cc',
         'src/node_buffer.cc',
+        'src/node_midi.cc',
         'src/node_isolate.cc',
         'src/node_constants.cc',
         'src/node_extensions.cc',
@@ -179,7 +191,12 @@
           ]
         }],
         [ 'OS=="mac"', {
-          'libraries': [ '-framework Carbon' ],
+          'libraries': [ 
+            '-framework Carbon',
+            '-framework CoreAudio',
+            '-framework CoreFoundation',
+            '-framework CoreMIDI'
+           ],
           'defines!': [
             'PLATFORM="mac"',
           ],
@@ -191,6 +208,7 @@
         [ 'OS=="linux"', {
           'libraries': [
             '-ldl',
+            '-lasound',
             '-lutil' # needed for openpty
           ],
         }],

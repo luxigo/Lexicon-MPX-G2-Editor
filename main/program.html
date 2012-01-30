@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MPXG2Edit</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="Author" content="Luc Deschenaux">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="css/jquery.mobile.css" />
+    <link rel="stylesheet" href="css/mpxedit.css" />
+    <script src="socket.io/socket.io.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile.js"></script>
+    <script src="js/mpxedit.js"></script>
+  </head>
+  <body>
+    <div data-role="page" class="home">
+      <div data-role="header" data-theme="b">
+        <h1>Library</h1>
+        TOOLBAR
+      </div><!-- /header -->
+
+      <div data-role="content">	
+        <div class="content-primary home">
+          <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
+            <li data-role="fieldcontain"><label for="filter">Filter</label>
+            <input type="search" id="filter" name="filter">
+            </li>
+          </ul>
+          <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
+          </ul>
+        </div>
+
+      </div><!-- /content -->
+
+      <div class="ui-footer ui-bar-c" data-role="footer" data-theme="c" role="contentinfo">
+        <p class="left">
+        <a href="http://www.miprosoft.com/mpxg2" target="_blank">Official homepage</a>
+        </p>
+      </div><!-- /footer -->
+
+    </div><!-- /page -->
+  </body>
+</html>

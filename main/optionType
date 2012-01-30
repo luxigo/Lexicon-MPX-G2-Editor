@@ -1,0 +1,16 @@
+012C    10    Optimize            0001    00    FFFF    01      0000    0064    002B
+012D    10    Optimize            0001    00    FFFF    01      000A    003C    0049
+012E    10    Optimize            0001    00    FFFF    01      000A    0028    0049
+012F    10    Rate units          0001    00    FFFF    01      0000    0001    0013
+0130    10    Rate1 units         0001    00    FFFF    01      0000    0001    0013
+0131    10    Rate2 units         0001    00    FFFF    01      0000    0001    0013
+0132    10    Time Units          0001    00    FFFF    01      0000    0005    0014
+0133    10    Fbk insert          0001    00    FFFF    01      0000    0006    0015
+0134    10    Type                0001    00    FFFF    01      0000    0001    0031
+0135    10    DRate units         0001    00    FFFF    01      0000    0001    0013
+0136    10    Time Units          0001    00    FFFF    01      0000    0005    0014
+0137    10    Time Units          0001    00    FFFF    01      0000    0005    0014
+0138    10    Src                 0001    00    FFFF    01      0000    0001    0063
+0139    10    Src                 0001    00    FFFF    01      0001    0002    006A
+013A    10    Optimize            0001    00    FFFF    01      000A    0017    0049
+013B    10    Mix Control         0000    00    FFFF    01      0065    0066    800D

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MPXG2Edit</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="Author" content="Luc Deschenaux">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="css/jquery.mobile.css" />
+    <link rel="stylesheet" href="css/mpxedit.css" />
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile.js"></script>
+    <script src="js/mpxedit.js"></script>
+  </head>
+  <body>
+    <div data-role="page" class="home">
+      <div data-role="header" data-theme="b">
+        <h1>Library</h1>
+        <div id="toolbar" data-role="controlgroup" data-type="horizontal">
+          <a id="dump" href="/dump.html" data-role="button" data-icon="arrow-d" data-iconpos="left" >Dump</a>
+          <a id="send" href="/send.html" data-role="button" data-icon="arrow-u" data-iconpos="left" >Send</a>
+          <a id="help" data-role="button" data-icon="info" data-iconpos="left" >Help</a>
+          <a data-role="button" href="../../" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+        </div> 
+      </div><!-- /header -->
+      <div data-role="content">	
+        <div class="content-primary home">
+          <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
+            <li><a class="ui-disabled" href="programs.html">Programs</a></li>
+            <li><a class="ui-disabled" href="banks.html">Banks</a></li>
+            <li><a class="ui-disabled" href="setups.html">Setups</a></li>
+            <li><a class="ui-disabled" href="gpatch.html">Global Patches</a></li>
+            <li><a class="ui-disabled" href="bpatch.html">Bypass Patches</a></li>
+            <li><a class="ui-disabled" href="remap.html">Controller Remap</a></li>
+            <li><a class="ui-disabled" href="chains.html">Program Chains</a></li>
+            <li><a class="ui-disabled" href="midimap.html">Midi Maps</a></li>
+            <li><a class="ui-disabled" href="choices.html">Current Choices</a></li>
+            <li><a class="ui-disabled" href="softrow.html">Soft Row</a></li>
+            <li><a class="ui-disabled" href="dbase.html">Database</a></li>
+          </ul>
+        </div>
+
+      </div><!-- /content -->
+    </div><!-- /page -->
+  </body>
+</html>

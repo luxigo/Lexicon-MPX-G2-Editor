@@ -1,0 +1,59 @@
+<!DOCTYPE html5>
+<html>
+  <head>
+    <title>MIDI Settings</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile.css" />
+    <link rel="stylesheet" href="css/mpxedit.css" />
+    <script src="socket.io/socket.io.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile.js"></script>
+    <script src="js/mpxedit.js"></script>
+  </head>
+  <body>
+    <div data-role="page" data-cache="no" class="type-interior">
+      <div data-role="header" data-position="fixed" data-theme="b">
+        <h1>MIDI Settings</h1>
+        TOOLBAR
+      </div><!-- /header -->
+
+      <div data-role="content">
+        <ul id="midi_settings" data-role="listview" data-theme="c" data-dividertheme="d">
+          <li data-role="fieldcontain">
+          <fieldset data-role="controlgroup">
+            <legend>MIDI Input</legend>
+            <div class="ui-radio">
+              <!--
+              <input type="radio" name="midiin" id="midiin-1" value="1" checked="checked">
+              <label for="midiin-1">MidiIn1</label>
+              <input type="radio" name="midiin" id="midiin-2" value="2">
+              <label for="midiin-2">MidiIn2</label>
+              -->
+              midi_inputs
+            </div>
+          </fieldset>
+          </li>
+          <li data-role="fieldcontain">
+          <fieldset data-role="controlgroup">
+            <legend>MIDI Output</legend>
+            <div class="ui-radio">
+              <!--
+              <input type="radio" name="midiout" id="midiout-1" value="1" checked="checked">
+              <label for="midiout-1">MidiOut1</label>
+              <input type="radio" name="midiout" id="midiout-2" value="2">
+              <label for="midiout-2">MidiOut2</label>
+              -->
+              midi_outputs
+            </div>
+          </fieldset>
+          </li>
+          <li data-role="fieldcontain">
+          <label for="deviceID">MIDI Device ID</label>
+          <input id="deviceID" name="deviceID" type="number" min="0" max="126" value="_deviceID_">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

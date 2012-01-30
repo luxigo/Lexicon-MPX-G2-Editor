@@ -1,0 +1,577 @@
+{
+  "program.gain.noeffect": {
+    "man": 92
+  },
+  "program.gain.tone": {
+    "steps": 0,
+    "man": 92
+  },
+  "program.gain.crunch": {
+    "steps": 0,
+    "man":	92
+  },
+  "program.gain.screamer": {
+    "steps": 0,
+    "man": 93
+  },
+  "program.gain.overdrive": {
+    "steps": 0,
+    "man": 94
+  },
+  "program.gain.distortion": {
+    "steps": 0,
+    "man": 95
+  },
+  "program.gain.preamp": {
+    "steps": 0,
+    "man": 95
+  },
+  "program.gain.splitpreamp": {
+    "steps": 0,
+    "man": 95
+  },
+  "program.gain.allparams": {
+    "steps": 0,
+    "man": 92
+  },
+  "program.effect1.noeffect": {
+    "man": 97
+  },
+  "program.effect2.noeffect": {
+    "man": 97
+  },
+  "program.effect1.detune(m)": {
+    "steps": 29,
+    "man": 97
+  },
+  "program.effect1.detune(s)": {
+    "steps": 34,
+    "man": 97
+  },
+  "program.effect1.detune(d)": {
+    "steps": 42,
+    "man": 97
+  },
+  "program.effect1.shift(m)": {
+    "steps": 67,
+    "man": 98
+  },
+  "program.effect1.shift(s)": {
+    "steps": 73,
+    "man": 98
+  },
+  "program.effect1.shift(d)": {
+    "steps": 96,
+    "man": 98
+  },
+  "program.effect1.diatonichmy": {
+    "steps": 96,
+    "man": 99
+  },
+  "program.effect1.panner": {
+    "steps": 25,
+    "man": 100
+  },
+  "program.effect2.panner": {
+    "steps": 25,
+    "man": 100
+  },
+  "program.effect1.autopan": {
+    "steps": 25,
+    "man": 100
+  },
+  "program.effect2.autopan": {
+    "steps": 25,
+    "man": 100
+  },
+  "program.effect1.tremolo(m)": {
+    "steps": 17,
+    "man": 101
+  },
+  "program.effect2.tremolo(m)": {
+    "steps": 17,
+    "man": 101
+  },
+  "program.effect1.tremolo(s)": {
+    "steps": 13,
+    "man": 101
+  },
+  "program.effect2.tremolo(s)": {
+    "steps": 13,
+    "man": 101
+  },
+  "program.effect1.univybe": {
+    "steps": 70,
+    "man": 101
+  },
+  "program.effect2.univybe": {
+    "steps": 70,
+    "man": 101
+  },
+  "program.effect1.customvybe": {
+    "steps": 70,
+    "man": 102
+  },
+  "program.effect2.customvybe": {
+    "steps": 70,
+    "man": 102
+  },
+  "program.effect1.phaser": {
+    "steps": 77,
+    "man": 102
+  },
+  "program.effect2.phaser": {
+    "steps": 77,
+    "man": 102
+  },
+  "program.effect1.orangephase": {
+    "steps": 77,
+    "man": 103
+  },
+  "program.effect2.orangephase": {
+    "steps": 77,
+    "man": 103
+  },
+  "program.effect1.redcomp": {
+    "steps": 61,
+    "man": 103
+  },
+  "program.effect2.redcomp": {
+    "steps": 61,
+    "man": 103
+  },
+  "program.effect1.bluecomp": {
+    "steps": 49,
+    "man": 104
+  },
+  "program.effect2.bluecomp": {
+    "steps": 49,
+    "man": 104
+  },
+  "program.effect1.digidrive1": {
+    "steps": 56,
+    "man": 104
+  },
+  "program.effect2.digidrive1": {
+    "steps": 56,
+    "man": 104
+  },
+  "program.effect1.digidrive2": {
+    "steps": 53,
+    "man": 104
+  },
+  "program.effect2.digidrive2": {
+    "steps": 53,
+    "man": 104
+  },
+  "program.effect1.octabuzz": {
+    "steps": 15,
+    "man": 105
+  },
+  "program.effect2.octabuzz": {
+    "steps": 15,
+    "man": 105
+  },
+  "program.effect1.sweepfilter": {
+    "steps": 92,
+    "man": 106
+  },
+  "program.effect2.sweepfilter": {
+    "steps": 92,
+    "man": 106
+  },
+  "program.effect1.1-band(m)": {
+    "steps": 50,
+    "man": 106
+  },
+  "program.effect2.1-band(m)": {
+    "steps": 50,
+    "man": 106
+  },
+  "program.effect1.wah1": {
+    "steps": 41,
+    "man": 107
+  },
+  "program.effect2.wah1": {
+    "steps": 41,
+    "man": 107
+  },
+  "program.effect1.pedalwah1": {
+    "steps": 41,
+    "man": 107
+  },
+  "program.effect2.pedalwah1": {
+    "steps": 41,
+    "man": 107
+  },
+  "program.effect1.wah2": {
+    "steps": 71,
+    "man": 107
+  },
+  "program.effect2.wah2": {
+    "steps": 71,
+    "man": 107
+  },
+  "program.effect1.pedalwah2": {
+    "steps": 71,
+    "man": 107
+  },
+  "program.effect2.pedalwah2": {
+    "steps": 71,
+    "man": 107
+  },
+  "program.effect1.volume(m)": {
+    "steps": 17,
+    "man": 108
+  },
+  "program.effect2.volume(m)": {
+    "steps": 17,
+    "man": 108
+  },
+  "program.effect1.volume(s)": {
+    "steps": 13,
+    "man": 108
+  },
+  "program.effect2.volume(s)": {
+    "steps": 13,
+    "man": 108
+  },
+  "program.effect1.volume(d)": {
+    "steps": 18,
+    "man": 108
+  },
+  "program.effect2.volume(d)": {
+    "steps": 18,
+    "man": 108
+  },
+  "program.effect1.pedalvol": {
+    "steps": 13,
+    "man": 108
+  },
+  "program.effect2.pedalvol": {
+    "steps": 13,
+    "man": 108
+  },
+  "program.effect1.extpedalvol": {
+    "steps": 13,
+    "man": 108
+  },
+  "program.effect2.extpedalvol": {
+    "steps": 13,
+    "man": 108
+  },
+  "program.effect1.testtone": {
+    "steps": 33,
+    "man": 109
+  },
+  "program.effect2.testtone": {
+    "steps": 33,
+    "man": 109
+  },
+  "program.effect2.ringmod": {
+    "steps": 34,
+    "man": 0
+  },
+  "program.effect1.click": {
+    "steps": 14,
+    "man": 109
+  },
+  "program.effect1.comp(s)": {
+    "steps": 59,
+    "man": 109
+  },
+  "program.effect2.comp(s)": {
+    "steps": 59,
+    "man": 109
+  },
+  "program.effect2.click": {
+    "steps": 14,
+    "man": 109
+  },
+  "program.chorus.noeffect": {
+    "man": 110
+  },
+  "program.chorus.chorus": {
+    "steps": 60,
+    "man": 110
+  },
+  "program.chorus.detune(m)": {
+    "steps": 29,
+    "man": 111
+  },
+  "program.chorus.flanger(m)": {
+    "steps": 29,
+    "man": 112
+  },
+  "program.chorus.flange24(m)": {
+    "steps": 42,
+    "man": 112
+  },
+  "program.chorus.flanger(s)": {
+    "steps": 47,
+    "man": 112
+  },
+  "program.chorus.rotarycab": {
+    "steps": 76,
+    "man": 113
+  },
+  "program.chorus.aerosol": {
+    "steps": 59,
+    "man": 113
+  },
+  "program.chorus.orbits": {
+    "steps": 57,
+    "man": 114
+  },
+  "program.chorus.centrifuge1": {
+    "steps": 35,
+    "man": 115
+  },
+  "program.chorus.centrifuge2": {
+    "steps": 43,
+    "man": 115
+  },
+  "program.chorus.comb1": {
+    "steps": 35,
+    "man": 116
+  },
+  "program.chorus.comb2": {
+    "steps": 51,
+    "man": 116
+  },
+  "program.chorus.volume(m)": {
+    "steps": 17,
+    "man": 117
+  },
+  "program.chorus.volume(s)": {
+    "steps": 13,
+    "man": 117
+  },
+  "program.chorus.volume(d)": {
+    "steps": 18,
+    "man": 117
+  },
+  "program.chorus.pedalvol": {
+    "steps": 13,
+    "man": 117
+  },
+  "program.chorus.extpedalvol": {
+    "steps": 13,
+    "man": 117
+  },
+  "program.delay.noeffect": {
+    "man": 118
+  },
+  "program.delay.delay(m)": {
+    "steps": 17,
+    "man": 119
+  },
+  "program.delay.delay(s)": {
+    "steps": 23,
+    "man": 119
+  },
+  "program.delay.delay(d)": {
+    "steps": 40,
+    "man": 119
+  },
+  "program.delay.echo(m)": {
+    "steps": 21,
+    "man": 120
+  },
+  "program.delay.echo(s)": {
+    "steps": 31,
+    "man": 120
+  },
+  "program.delay.echo(d)": {
+    "steps": 40,
+    "man": 120
+  },
+  "program.delay.looper": {
+    "steps": 29,
+    "man": 121
+  },
+  "program.delay.jamman": {
+    "steps": 25,
+    "man": 122
+  },
+  "program.delay.ducker": {
+    "steps": 28,
+    "man": 123
+  },
+  "program.reverb.noeffect": {
+    "man": 124
+  },
+  "program.reverb.chamber": {
+    "steps": 0,
+    "man": 124
+  },
+  "program.reverb.hall": {
+    "steps": 0,
+    "man": 124
+  },
+  "program.reverb.plate": {
+    "steps": 0,
+    "man": 125
+  },
+  "program.reverb.ambience": {
+    "steps": 0,
+    "man": 125
+  },
+  "program.reverb.gate": {
+    "steps": 0,
+    "man": 126
+  },
+  "program.reverb.gate": {
+    "steps": 0,
+    "man": 126
+  },
+  "program.equalizer.noeffect": {
+    "man": 127
+  },
+  "program.equalizer.1-band(m)": {
+    "steps": 50,
+    "man": 129
+  },
+  "program.equalizer.2-band(m)": {
+    "steps": 70,
+    "man": 129
+  },
+  "program.equalizer.3-band(m)": {
+    "steps": 90,
+    "man": 129
+  },
+  "program.equalizer.4-band(m)": {
+    "steps": 110,
+    "man": 129
+  },
+  "program.equalizer.1-band(s)": {
+    "steps": 68,
+    "man": 129
+  },
+  "program.equalizer.2-band(s)": {
+    "steps": 109,
+    "man": 129
+  },
+  "program.equalizer.1-band(d)": {
+    "steps": 68,
+    "man": 130
+  },
+  "program.equalizer.2-band(d)": {
+    "steps": 109,
+    "man": 130
+  },
+  "program.equalizer.fcsplitter": {
+    "steps": 55,
+    "man": 130
+  },
+  "program.equalizer.crossover": {
+    "steps": 29,
+    "man": 131
+  },
+  "program.equalizer.volume(m)": {
+    "steps": 17,
+    "man": 131
+  },
+  "program.equalizer.volume(s)": {
+    "steps": 13,
+    "man": 131
+  },
+  "program.equalizer.volume(d)": {
+    "steps": 18,
+    "man": 131
+  },
+  "program.equalizer.pedalvol": {
+    "steps": 13,
+    "man": 132
+  },
+  "program.equalizer.extpedalvol": {
+    "steps": 13,
+    "man": 132
+  },
+  "program.equalizer.sweepfilter": {
+    "steps": 92,
+    "man": 106
+  },
+  "program.equalizer.wah1": {
+    "steps": 41,
+    "man": 107
+  },
+  "program.equalizer.wah2": {
+    "steps": 71,
+    "man": 107
+  },
+  "program.equalizer.pedalwah1": {
+    "steps": 41,
+    "man": 107
+  },
+  "program.equalizer.pedalwah2": {
+    "steps": 71,
+    "man": 107
+  },
+  "program.equalizer.testtone": {
+    "steps": 33,
+    "man": 109
+  },
+  "program.equalizer.ringmod": {
+    "steps": 34,
+    "man": 0
+  },
+  "program.knob.value": {
+    "man": 134
+  },
+  "program.lfo1.mode": {
+    "man": 134
+  },
+  "program.lfo2.mode": {
+    "man": 134
+  },
+  "program.rand.rndlo": {
+    "man": 135
+  },
+  "program.a/b.mode": {
+    "man": 135
+  },
+  "program.env.src1": {
+    "man": 136
+  },
+  "program.post.mix": {
+    "man": 37
+  },
+  "program.send.mix": {
+    "man": 37
+  },
+  "program.spkrsim.enable": {
+    "man": 38
+  },
+  "program.ngate.enable": {
+    "man": 40 
+  },
+  "program.tempo.rate": {
+    "man": 51
+  },
+  "program.toepatches.fx1toepat": {
+    "man": 35
+  },
+  "system.audioconfig.softsat": {
+    "man": 64
+  },
+  "system.setup.pgmload": {
+    "man": 65
+  },
+  "system.midi.pgmchange": {
+    "man": 70
+  },
+  "system.globalpatch.patch": {
+    "man": 78
+  },
+  "system.bypasspatch.patch": {
+    "man": 79
+  },
+  "system.tunermodes.cal": {
+    "man": 80
+  },
+  "system.globalmodes.glbspkrsim": {
+    "man": 81
+  }
+}
+

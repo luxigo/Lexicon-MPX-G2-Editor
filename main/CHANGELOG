@@ -1,0 +1,23 @@
+2012-12-22 - state of upcoming version 1.0a2
+- Allow to open and synchronize more than 5 or 6 windows simultaneously, using socketio instead of long polling.
+- The interface elements are now unselectable, even with ctrl-a
+- Display processing steps required/available in the algorithm selection list
+- Drag'n drop and upload sysex or dumps
+- Queued midi output with 50ms between each message
+- Fixed some CSS issues
+- The toolbar includes now Dump, Send, Help and Home buttons
+- Fixed single program dump
+- Dump All Programs emulating front panel buttons with sysex
+- Save every program dumped in a global JSON library
+- Save MIDI configuration, allow MIDI device ID selection
+- Fix effect bypass toggle on first click when not in edit mode
+- Set longer timeout before changing parameter value
+- When using input arrows or typing value, validate and update slider
+- Patch destinations are updated on algorithm change
+
+2011-12-10 - version 1.01a released
+- Open web interface in default browser automatically when started
+- Display URLs to be used with remote control devices on homepage
+- Don't crash when no MIDI interface is connected yet
+- Block web interface when control tree is built
+- Updated to node 0.66 (except for win32)

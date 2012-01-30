@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MPXG2Edit - Programs</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="Author" content="Luc Deschenaux">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="css/jquery.mobile.css" />
+    <link rel="stylesheet" href="css/mpxedit.css" />
+    <script src="socket.io/socket.io.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile.js"></script>
+    <script src="js/mpxedit.js"></script>
+  </head>
+  <body>
+    <div data-role="page" class="home">
+      <div data-role="header" data-theme="b">
+        <h1>Programs</h1>
+        TOOLBAR
+      </div><!-- /header -->
+
+      <div data-role="content">	
+        <div class="content-primary home programs">
+          <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
+            <li data-role="fieldcontain"><label for="filter">Filter</label>
+            <input type="search" id="filter" name="filter">
+            </li>
+          </ul>
+          <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
+            PROGRAMS
+          </ul>
+        </div>
+
+      </div><!-- /content -->
+
+      <div data-role="footer" data-position="fixed" data-id="effects">
+
+
+        <div data-role="navbar">
+          <ul>
+            <li><a id="view">View</a></li>
+            <li><a id="load">Load</a></li>
+            <li><a id="edit">Edit</a></li>
+            <li><a id="bank">Bank</a></li>
+            <li><a id="Save">Save</a></li>
+          </ul>
+        </div>
+        <div data-role="navbar">
+          <ul>
+            <li><a id="del">Delete</a></li>
+            <li><a id="notes">Notes</a></li>
+            <li><a id="diff">Diff</a></li>
+            <li><a id="filter">Filter</a></li>
+            <li><a id="share">Share</a></li>
+          </ul>
+        </div>
+
+      </div><!-- /footer -->
+
+    </div><!-- /page -->
+  </body>
+</html>

@@ -1,0 +1,19 @@
+--- /home/guest/Téléchargements/jquery.mobile-1.0rc2.js	2011-10-20 10:05:20.810026888 +0200
++++ /home/guest/main/www/js/jquery.mobile.js	2011-10-24 08:50:08.474496152 +0200
+@@ -5606,7 +5606,7 @@
+ 					self.list.find( $.mobile.activeBtnClass ).focus();
+ 				}
+ 
+-				if ( menuHeight > screenHeight - 80 || !$.support.scrollTop ) {
++				if ( self.options.menuDialog || menuHeight > screenHeight - 80 || !$.support.scrollTop ) {
+ 					// prevent the parent page from being removed from the DOM,
+ 					// otherwise the results of selecting a list item in the dialog
+ 					// fall into a black hole
+@@ -5806,6 +5806,7 @@
+ 		hidePlaceholderMenuItems: true,
+ 		closeText: "Close",
+ 		nativeMenu: true,
++		menuDialog: false,
+ 		initSelector: "select:not(:jqmData(role='slider'))"
+ 	},
+ 
