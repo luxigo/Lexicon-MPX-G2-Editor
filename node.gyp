@@ -4,11 +4,9 @@
     # Turn off -Werror in V8
     # See http://codereview.chromium.org/8159015
     'werror': '',
-    'target_arch': 'ia32',
     'node_use_dtrace': 'false',
     'node_use_openssl%': 'true',
     'node_use_system_openssl%': 'false',
-    'node_use_isolates%': 'true',
     'library_files': [
       'src/node.js',
       'lib/_debugger.js',
@@ -84,10 +82,8 @@
         'src/cares_wrap.cc',
         'src/handle_wrap.cc',
         'src/node.cc',
-        'src/node_vars.cc',
         'src/node_buffer.cc',
         'src/node_midi.cc',
-        'src/node_isolate.cc',
         'src/node_constants.cc',
         'src/node_extensions.cc',
         'src/node_file.cc',
@@ -107,12 +103,9 @@
         'src/v8_typed_array.cc',
         'src/udp_wrap.cc',
         # headers to make for a more pleasant IDE experience
-        'src/ngx-queue.h',
         'src/handle_wrap.h',
         'src/node.h',
-        'src/node_vars.h',
         'src/node_buffer.h',
-        'src/node_isolate.h',
         'src/node_constants.h',
         'src/node_crypto.h',
         'src/node_extensions.h',
@@ -145,12 +138,6 @@
       ],
 
       'conditions': [
-        [ 'node_use_isolates=="true"', {
-          'defines': [ 'HAVE_ISOLATES=1' ],
-        }, {
-          'defines': [ 'HAVE_ISOLATES=0' ],
-        }],
-
         [ 'node_use_openssl=="true"', {
           'defines': [ 'HAVE_OPENSSL=1' ],
           'sources': [ 'src/node_crypto.cc' ],
@@ -180,6 +167,7 @@
             'FD_SETSIZE=1024',
             # we need to use node's preferred "win32" rather than gyp's preferred "win"
             'PLATFORM="win32"',
+            '_UNICODE=1',
           ],
           'libraries': [ '-lpsapi.lib' ]
         },{ # POSIX

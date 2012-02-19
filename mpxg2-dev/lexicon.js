@@ -30,7 +30,7 @@ function mpxg2(options,callback) {
 	this.MIDI_OUTPUT='';
 
 	this.shortAddresses_mode=0;
-	this.DEBUG=0;
+	this.DEBUG=9;
 
 	this.COMPANY_ID=0x6; // LEXICON
 	this.PRODUCT_ID=0xF; // MPX-G2

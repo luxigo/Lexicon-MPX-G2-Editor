@@ -332,7 +332,7 @@ function init() {
 		console.log('err',e);
 	};
 
-	g2.DEBUG=0;
+	g2.DEBUG=9;
 };
 
 function levels_parse(L) {
