@@ -5,7 +5,6 @@ Lexicon MPX G2 editor / librarian
 
 Unix/Macintosh (requires python 2.6 or 2.7):
 
-    ./configure
     ./toprod.sh
 
 Windows:
@@ -16,3 +15,4 @@ Links
 ---
   - [official website](http://miprosoft.com/mpxg2/)
   - irc chatroom, [#mpxg2 on freenode.net](http://webchat.freenode.net?channels=mpxg2&uio=d4)
+  - mailing list, [Lexicon MPX G2 Editor google group](https://groups.google.com/group/lexicon-mpx-g2-editor)
