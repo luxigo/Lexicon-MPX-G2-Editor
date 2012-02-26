@@ -18,51 +18,26 @@
 // DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-var common = require('../common');
+var util = require('util');
+var path = require('path');
 var assert = require('assert');
-var net = require('net');
-var http = require('http');
+var spawn = require('child_process').spawn;
+var common = require('../common');
 
-// Test that the PATCH verb gets passed through correctly
-
-var server_response = '';
-var received_method = null;
-
-var server = http.createServer(function(req, res) {
-  received_method = req.method;
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.write('hello ');
-  res.write('world\n');
-  res.end();
-});
-server.listen(common.PORT);
-
-server.on('listening', function() {
-  var c = net.createConnection(common.PORT);
-
-  c.setEncoding('utf8');
-
-  c.on('connect', function() {
-    c.write('PATCH / HTTP/1.0\r\n\r\n');
+if (process.argv[2] !== "child") {
+  var child = spawn('node', [__filename, "child"], {
+    cwd: common.tmpDir,
+    env: util._extend({ PATH: path.dirname(process.execPath) }, process.env)
   });
 
-  c.on('data', function(chunk) {
-    console.log(chunk);
-    server_response += chunk;
+  var childArgv0 = '';
+  child.stdout.on('data', function (chunk) {
+    childArgv0 += chunk;
   });
-
-  c.on('end', function() {
-    c.end();
+  child.on('exit', function () {
+    assert.equal(childArgv0, process.execPath);
   });
-
-  c.on('close', function() {
-    server.close();
-  });
-});
-
-process.on('exit', function() {
-  var m = server_response.split('\r\n\r\n');
-  assert.equal(m[1], 'hello world\n');
-  assert.equal(received_method, 'PATCH');
-});
+}
+else {
+  process.stdout.write(process.argv[0]);
+}

@@ -69,7 +69,7 @@ For UNIX domain sockets, `options` argument should be an object which specifies:
 Common options are:
 
   - `allowHalfOpen`: if `true`, the socket won't automatically send
-    a FIN packet when the other end of the socket sends a FIN packet. 
+    a FIN packet when the other end of the socket sends a FIN packet.
     Defaults to `false`.
     See ['end'](#event_end_) event for more information.
 
@@ -155,12 +155,6 @@ This function is asynchronous.  When the server has been bound,
 ['listening'](#event_listening_) event will be emitted.
 the last parameter `listeningListener` will be added as an listener for the
 ['listening'](#event_listening_) event.
-
-#### server.pause(msecs)
-
-Stop accepting connections for the given number of milliseconds (default is
-one second).  This could be useful for throttling new connections against
-DoS attacks or other oversubscription.
 
 #### server.close([cb])
 
@@ -296,12 +290,6 @@ Users who experience large or growing `bufferSize` should attempt to
 Sets the encoding (either `'ascii'`, `'utf8'`, or `'base64'`) for data that is
 received. Defaults to `null`.
 
-#### socket.setSecure()
-
-This function has been removed in v0.3. It used to upgrade the connection to
-SSL/TLS. See the [TLS section](tls.html#tLS_) for the new API.
-
-
 #### socket.write(data, [encoding], [callback])
 
 Sends data on the socket. The second parameter specifies the encoding in the
@@ -313,11 +301,6 @@ buffer. Returns `false` if all or part of the data was queued in user memory.
 
 The optional `callback` parameter will be executed when the data is finally
 written out - this may not be immediately.
-
-#### socket.write(data, [encoding], [callback])
-
-Write data with the optional encoding. The callback will be made when the
-data is flushed to the kernel.
 
 #### socket.end([data], [encoding])
 

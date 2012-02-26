@@ -27,10 +27,8 @@
 (function(process) {
   global = this;
 
-  var EventEmitter;
-
   function startup() {
-    EventEmitter = NativeModule.require('events').EventEmitter;
+    var EventEmitter = NativeModule.require('events').EventEmitter;
     process.__proto__ = EventEmitter.prototype;
     process.EventEmitter = EventEmitter; // process.EventEmitter is deprecated
 
@@ -326,6 +324,10 @@
       // For supporting legacy API we put the FD here.
       stdin.fd = fd;
 
+      // stdin starts out life in a paused state, but node doesn't
+      // know yet.  Call pause() explicitly to unref() it.
+      stdin.pause();
+
       return stdin;
     });
 
@@ -491,7 +493,7 @@
   }
 
   NativeModule.exists = function(id) {
-    return (id in NativeModule._source);
+    return NativeModule._source.hasOwnProperty(id);
   }
 
   NativeModule.getSource = function(id) {

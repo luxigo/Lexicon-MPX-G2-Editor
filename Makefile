@@ -48,8 +48,8 @@ distclean:
 	-rm -f config.mk
 
 test: all
-	PYTHONPATH=tools/closure_linter/ $(PYTHON) tools/closure_linter/closure_linter/gjslint.py --unix_mode --strict --nojsdoc -r lib/ -r src/ --exclude_files lib/punycode.js
 	$(PYTHON) tools/test.py --mode=release simple message
+	PYTHONPATH=tools/closure_linter/ $(PYTHON) tools/closure_linter/closure_linter/gjslint.py --unix_mode --strict --nojsdoc -r lib/ -r src/ --exclude_files lib/punycode.js
 
 test-http1: all
 	$(PYTHON) tools/test.py --mode=release --use-http1 simple message
@@ -129,8 +129,6 @@ out/doc/%: doc/%
 out/doc/api/%.html: doc/api/%.markdown node $(apidoc_dirs) $(apiassets) tools/doctool/doctool.js
 	out/Release/node tools/doctool/doctool.js doc/template.html $< > $@
 
-out/doc/%:
-
 website-upload: doc
 	rsync -r out/doc/ node@nodejs.org:~/web/nodejs.org/
 
@@ -153,9 +151,19 @@ PKGDIR=out/dist-osx
 pkg: $(PKG)
 
 $(PKG):
-	-rm -rf $(PKGDIR)
-	./configure --prefix=$(PKGDIR)/usr/local --without-snapshot
+	rm -rf $(PKGDIR)
+	rm -rf out/deps out/Release
+	./configure --prefix=$(PKGDIR)/32/usr/local --without-snapshot --dest-cpu=ia32
 	$(MAKE) install
+	rm -rf out/deps out/Release
+	./configure --prefix=$(PKGDIR)/usr/local --without-snapshot --dest-cpu=x64
+	$(MAKE) install
+	lipo $(PKGDIR)/32/usr/local/bin/node \
+		$(PKGDIR)/usr/local/bin/node \
+		-output $(PKGDIR)/usr/local/bin/node-universal \
+		-create
+	mv $(PKGDIR)/usr/local/bin/node-universal $(PKGDIR)/usr/local/bin/node
+	rm -rf $(PKGDIR)/32
 	$(packagemaker) \
 		--id "org.nodejs.NodeJS-$(VERSION)" \
 		--doc tools/osx-pkg.pmdoc \
